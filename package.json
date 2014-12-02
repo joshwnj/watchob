@@ -1,0 +1,23 @@
+{
+  "name": "watchob",
+  "version": "1.0.0",
+  "description": "Watchable objects",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^3.0.3"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshwnj/watchob.git"
+  },
+  "author": "joshwnj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshwnj/watchob/issues"
+  },
+  "homepage": "https://github.com/joshwnj/watchob"
+}
