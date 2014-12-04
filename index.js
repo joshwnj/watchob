@@ -60,6 +60,14 @@ Watchob.prototype.patch = function (type, key, args) {
   return headRev;
 };
 
+Watchob.prototype.set = function (key, val) {
+  return this.patch('set', key, val);
+};
+
+Watchob.prototype.del = function (key) {
+  return this.patch('del', key);
+};
+
 Watchob.prototype.patchAtRev = function (type, key, args, rev) {
   //> only allow the patch if the provided rev matches the head rev
   if (rev !== this.getHeadRev()) {
