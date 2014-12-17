@@ -5,14 +5,16 @@ function clone (ob) {
   return JSON.parse(JSON.stringify(ob));
 }
 
-function Watchob (state) {
+function Watchob (state, opts) {
+  if (!opts) { opts = {}; }
+
   //> store a copy
   this._state = state ? clone(state) : {};
 
   this._keyRevs = {};
 
   this._changes = new Changes({
-    maxLength: 10
+    maxLength: opts.maxLength || 10
   });
 
   this._watchers = [];
